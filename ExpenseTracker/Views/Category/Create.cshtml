@@ -5,6 +5,7 @@
 
 <div style="margin: 0 auto;padding-top: 30px; position: relative;">
     <div class="card p-lg-3 shadow-lg p-3 mb-5 rounded " style="margin-left: auto; margin-right: auto; width: 40%; background-color: #FEFEFE; color: #015B42 ">
+
         <h3 class="text-center">Add Category</h3><hr />
         <form method="post" asp-action="Create" asp-controller="Category">
             <div class="form-group mb-3">
@@ -12,7 +13,9 @@
                 <div>
                     <input type="text" asp-for="CategoryName" class="form-control" />
                     <span asp-validation-for="CategoryName" class="text-danger" />
-                    <div asp-validation-summary="ModelOnly"></div>
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
                 </div>
             </div>
             <div class="text-center">
