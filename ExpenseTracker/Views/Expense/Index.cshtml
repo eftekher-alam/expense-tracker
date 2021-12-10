@@ -1,0 +1,75 @@
+﻿@model IEnumerable<ExpenseTracker.Models.Expense>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-12" style="margin: 0 auto;padding-top: 30px; position: relative;">
+        <iv class="card p-lg-3 shadow-lg p-3 mb-5 rounded" style="margin-left: auto; margin-right: auto; width: 90%; background-color: #FEFEFE; color: #015B42; ">
+            <h3 class="text-center">Expense List</h3><br />
+            <div class="col-12 row">
+                <div class="col-6">
+                    <form asp-controller="Expense" asp-action="index">
+                        <div class="d-flex justify-content-start mb-1">
+                            <label class="px-2">Form</label>
+                            <input style="width:150px" name="from" id="from" class="form-control form-control-sm mr-1" />
+                            <label class="px-2">To</label>
+                            <input style="width:150px" name="to" id="to" class="form-control form-control-sm mr-2" />
+                            <button type="submit" class="btn btn-success  btn-sm">Show</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <div class=" d-flex justify-content-end mb-1">
+                        <a class="btn btn-success btn-sm" asp-controller="Expense" asp-action="Create">Add Expense</a>
+                    </div>
+                </div>
+            </div><br />
+
+            <table class="table" style="color: #015B42">
+                <thead>
+                    <tr>
+                        <th>Category Name</th>
+                        <th>Date</th>
+                        <th>Ammount</th>
+                        <th>Modify</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var expense in Model)
+                    {
+                        <tr>
+                            <td>@expense.Category.CategoryName</td>
+                            <td>@expense.Date.ToString("yyyy-MM-dd")</td>
+                            <td>@expense.Ammount</td>
+                            <td>
+                                <a class="btn btn-success btn-sm" asp-controller="Expense" asp-action="Edit" asp-route-id="@expense.ExpenseId">Update</a>
+                                <a class="btn btn-danger btn-sm" asp-controller="Expense" asp-action="Delete" asp-route-id="@expense.ExpenseId">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+    </div>
+</div>
+
+@section styles {
+    <link href="~/lib/bootstrap-datepicker/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet" />
+}
+@section scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script>
+        $(() => {
+            $("#from").datepicker({
+                format: 'yyyy-mm-dd'
+            });
+            $("#to").datepicker({
+                format: 'yyyy-mm-dd'
+            });
+        })
+    </script>
+}
+
+
+

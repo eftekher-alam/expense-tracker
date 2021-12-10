@@ -1,0 +1,66 @@
+﻿@model ExpenseTracker.Models.Expense
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div style="margin: 0 auto;padding-top: 30px; position: relative;">
+    <div class="card p-lg-3 shadow-lg p-3 mb-5 rounded " style="margin-left: auto; margin-right: auto; width: 40%; background-color: #FEFEFE; color: #015B42 ">
+        <h3 class="text-center">Update Expense</h3><hr />
+        <div id="placeholder"></div>
+
+        <form method="post" asp-action="Edit" asp-controller="Expense" asp-route-ExpenseId="@Model.ExpenseId">
+
+
+            <div class="form-group mb-3">
+                <label asp-for="CategoryId">Category Name</label>
+                <div>
+                    <select asp-for="CategoryId" class="form-control" asp-items="@(new SelectList(ViewBag.Categories, "CategoryId", "CategoryName"))" required>
+                        <option selected="selected" value="">Select Category</option>
+                    </select>
+                    <span asp-validation-for="CategoryId" class="text-danger" />
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Date"></label>
+                <div>
+                    <input type="text" class="form-control" asp-for="Date" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Ammount"></label>
+                <div>
+                    <input type="text" asp-for="Ammount" class="form-control" />
+                    <span asp-validation-for="Ammount" class="text-danger" />
+                </div>
+            </div>
+
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Update</button>
+                <a asp-action="Index" asp-controller="Expense" class="btn btn-danger">Cancel</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+@section styles {
+    <link href="~/lib/bootstrap-datepicker/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet" />
+}
+
+@section scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script>
+        $(() => {
+            $("#Date").datepicker({
+                format: 'yyyy-mm-dd'
+            });
+        })
+    </script>
+}
+

@@ -1,0 +1,32 @@
+﻿@model ExpenseTracker.Models.Category
+@{
+    ViewData["Title"] = "Edit";
+}
+<div style="margin: 0 auto;padding-top: 30px; position: relative;">
+    <div class="card p-lg-3 shadow-lg p-3 mb-5 rounded " style="margin-left: auto; margin-right: auto; width: 40%; background-color: #FEFEFE; color: #015B42 ">
+        <h3 class="text-center">Update Category</h3><hr />
+        <div id="placeholder"></div>
+
+        <form method="post" asp-action="Edit" asp-controller="Category" asp-route-CategoryId="@Model.CategoryId">
+            <div class="form-group mb-3">
+                <label asp-for="CategoryName"></label>
+                <div>
+                    <input type="text" asp-for="CategoryName" class="form-control" />
+                    <span asp-validation-for="CategoryName" class="text-danger" />
+                    <div asp-validation-summary="ModelOnly"></div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success">Update</button>
+                <a asp-action="Index" asp-controller="Category" class="btn btn-danger">Cancel</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
