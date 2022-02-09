@@ -10,7 +10,8 @@ This is an expense tracker web application. The goals of the web application are
 6. Code-First approach of system development.
 
 ## what are the features of ExpenseTracker web application?
-<h3 align="center">Category</h3>
+<h2 align="center">Category</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
 <p align="center">
   <img src="Screenshots\1.1Category_List.png" width="820" height="440"><br/>
@@ -40,7 +41,8 @@ This is an expense tracker web application. The goals of the web application are
 
 - **Delete :** Selected category can be deleted here *Screenshot 1.4*.
 
-<h3 align="center">Special of Category section</h3>
+<h2 align="center">Special features of Category section</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
 <p align="center">
   <img src="Screenshots\1.5_Prevent_Duplicate_Category.png" width="820" height="440"><br/>
@@ -50,7 +52,8 @@ This is an expense tracker web application. The goals of the web application are
 - **Prevent Duplicate Expense Category :** To prevent users from creating duplicate Expense Category, Before saving the data that comes from user input. I compare the data with existing expense categories from the database in Category Controller. If the given data won't match with any of the existing records then save it into the database otherwise show an error message *Screenshot 1.5*.
 
 
-<h3 align="center">Expense</h3>
+<h2 align="center">Expense</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
 <p align="center">
   <img src="Screenshots\2.1_Expense_List.png" width="820" height="440"><br/>
@@ -80,7 +83,8 @@ This is an expense tracker web application. The goals of the web application are
 
 - **Delete :** You will be able to delete a selected expense by the Delete View *Screenshot 2.4*.
 
-<h3 align="center">Special of Expense section</h3>
+<h2 align="center">Special features of Expense section</h2>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
 <p align="center">
   <img src="Screenshots\2.5_Future_Date_Validation.png" width="820" height="440"><br/>
