@@ -9,6 +9,14 @@ This is an expense tracker web application. The goals of the web application are
 5. Bootstrap
 6. Code-First approach of system development.
 
+## How is the database designed?
+<p align="center">
+  <img src="Screenshots\0.1_Database_Diagram.png" width="820" height="440"><br/>
+  <i>0.1 Database Diagram</i>
+</p>
+
+- **Database :** The database was designed by the code first approach. Here we have two tables one is Categories and another one is Expenses. The relation between those tables is One-to-Many. In the Categories table, the primary key is CategoryId on the other hand in the Expenses table primary key is ExpenseId whereas the foreign key is CategoryId. *Screenshot 0.1*
+
 ## what are the features of ExpenseTracker web application?
 <h2 align="center">Category</h2>
 
