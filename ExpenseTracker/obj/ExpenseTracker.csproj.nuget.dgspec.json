@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASP.NET ALL PROJECTS\\ASP.NET Core\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj": {}
+    "D:\\PROJECTS\\ASP.NET_Core\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj": {}
   },
   "projects": {
-    "D:\\ASP.NET ALL PROJECTS\\ASP.NET Core\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj": {
+    "D:\\PROJECTS\\ASP.NET_Core\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP.NET ALL PROJECTS\\ASP.NET Core\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj",
+        "projectUniqueName": "D:\\PROJECTS\\ASP.NET_Core\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj",
         "projectName": "ExpenseTracker",
-        "projectPath": "D:\\ASP.NET ALL PROJECTS\\ASP.NET Core\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj",
+        "projectPath": "D:\\PROJECTS\\ASP.NET_Core\\ExpenseTracker\\ExpenseTracker\\ExpenseTracker.csproj",
         "packagesPath": "C:\\Users\\eftek\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP.NET ALL PROJECTS\\ASP.NET Core\\ExpenseTracker\\ExpenseTracker\\obj\\",
+        "outputPath": "D:\\PROJECTS\\ASP.NET_Core\\ExpenseTracker\\ExpenseTracker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
